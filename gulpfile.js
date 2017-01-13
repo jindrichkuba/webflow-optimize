@@ -42,7 +42,7 @@ gulp.task('html', ['javascript', 'css', 'fonts', 'images'], function(){
     .pipe(gulp.dest('build'))
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', ['html'], function() {
     browserSync.init({
         server: {
             baseDir: "./build"
