@@ -36,7 +36,7 @@ gulp.task('html', ['javascript', 'css', 'fonts', 'images'], function(){
     .pipe(replace('<link href="css/normalize.css" rel="stylesheet" type="text/css">',''))
     .pipe(replace('<link href="css/webflow.css" rel="stylesheet" type="text/css">',''))
     .pipe(replace('css/the-grand-tour.webflow.css','css/style.min.css'))
-    .pipe(replace('js/modernizr.js','js/modernizr-min.js'))
+    .pipe(replace('<script src="js/modernizr.js','<script async src="js/modernizr-min.js'))
     .pipe(replace('js/webflow.js','js/webflow-min.js'))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'))
