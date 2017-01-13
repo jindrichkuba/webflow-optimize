@@ -31,7 +31,7 @@ gulp.task('javascript', function(){
       .pipe(gulp.dest('build/js'))
 });
 
-gulp.task('html', function(){
+gulp.task('html', ['javascript', 'css', 'fonts', 'images'], function(){
   return gulp.src('*.html')
     .pipe(replace('<link href="css/normalize.css" rel="stylesheet" type="text/css">',''))
     .pipe(replace('<link href="css/webflow.css" rel="stylesheet" type="text/css">',''))
