@@ -1,7 +1,7 @@
 {
   "name": "gulp",
   "version": "1.0.0",
-  "description": "",
+  "description": "gulp",
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.18.6",
