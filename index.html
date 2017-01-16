@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Fri Jan 13 2017 13:17:41 GMT+0000 (UTC)  -->
-<html data-wf-page="586e743290a0f1ef3aa833a4" data-wf-site="586e743290a0f1ef3aa833a3">
+<!--  Last Published: Fri Jan 13 2017 16:26:34 GMT+0000 (UTC)  -->
+<html>
 <head>
   <meta charset="utf-8">
   <title>The Grand Tour</title>
@@ -366,7 +366,45 @@
     <div class="white-line"></div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/webflow-ix-min.js" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+<script>
+var Webflow = Webflow || [];
+Webflow.push(function () {
+  var namespace = '.w-slider';
+
+  function slideChangeEvent(evt) {
+    var slider;
+    if($(evt.target).is(namespace)) {
+      slider = $(evt.target);
+    } else {
+      slider = $(evt.target).closest(namespace)
+    }
+    if(slider) {
+      $(slider).trigger('slider-event', $(slider).data(namespace));
+    }
+  }
+
+  var tap_selector = $.map(['.w-slider-arrow-left', '.w-slider-arrow-right', '.w-slider-dot'], function(s) { return namespace + ' ' + s; }).join(', ');
+
+  // listeners
+  $(document).off('tap' + namespace, tap_selector, slideChangeEvent).on('tap' + namespace, tap_selector, slideChangeEvent);
+  $(document).off('swipe' + namespace, namespace, slideChangeEvent).on('swipe' + namespace, namespace, slideChangeEvent);
+
+  // initial slide - manually trigger the event
+  $(namespace + ':visible').each(function(i, s) {
+    slideChangeEvent({ target: s });
+  });
+
+});
+
+Webflow.require('ix').init([
+  {"slug":"open-search-block","name":"Open search block","value":{"style":{},"triggers":[{"type":"click","selector":".search-form-block","preserve3d":true,"stepsA":[{"wait":"100ms","display":"block","opacity":1,"transition":"opacity 200 ease 0, transform 200 ease 0","x":"0px","y":"50px","z":"0px"}],"stepsB":[{"wait":"100ms","transition":"transform 200 ease 0","x":"0px","y":"0px","z":"0px"},{"display":"none"}]}]}},
+  {"slug":"open-modal","name":"Open Modal","value":{"style":{},"triggers":[{"type":"click","selector":".modal-wrapper","preserve3d":true,"stepsA":[{"display":"block","opacity":1,"transition":"transform 200 ease 0, opacity 200 ease 0","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
+  {"slug":"close-modal","name":"Close Modal","value":{"style":{},"triggers":[{"type":"click","selector":".modal-wrapper","preserve3d":true,"stepsA":[{"opacity":0,"transition":"transform 200 ease 0, opacity 200 ease 0","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
+  {"slug":"modal-wraper","name":"Modal Wraper","value":{"style":{"display":"none","opacity":0,"scaleX":1.1,"scaleY":1.1,"scaleZ":1},"triggers":[]}},
+  {"slug":"play-video","name":"Play video","value":{"style":{},"triggers":[{"type":"click","stepsA":[{"opacity":0,"transition":"opacity 200 ease 0"}],"stepsB":[]},{"type":"click","selector":".video","stepsA":[{"display":"block"}],"stepsB":[]}]}}
+]);
+</script>
 </body>
 </html>

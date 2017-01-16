@@ -1153,7 +1153,7 @@
       $win.off(hashchange, checkHash);
       $.ajax({
         url: cleanSlashes("https://editor-api.webflow.com" + '/api/editor/view'),
-        data: { siteId: $html.attr('data-wf-site') },
+        data: { siteId: "586e743290a0f1ef3aa833a3" },
         xhrFields: { withCredentials: true },
         dataType: 'json',
         crossDomain: true,
@@ -1215,7 +1215,7 @@
     var api = {};
 
     // Cross-Domain AJAX for IE8
-    
+
 
     var $doc = $(document);
     var $forms;
@@ -1248,7 +1248,7 @@
     };
 
     function init() {
-      siteId = $('html').attr('data-wf-site');
+      siteId = "586e743290a0f1ef3aa833a3";
 
       $forms = $(namespace + ' form');
       if (!$forms.length) return;
