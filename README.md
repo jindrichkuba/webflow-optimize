@@ -18,6 +18,7 @@ Browser-sync
 <pre><code>$ gulp</code></pre>
 
 # Usage
-1) Export your website from webflow.com <br />
-2) Change line in #16 to your style <br />
+1) Export your website from webflow.com and save files to main path<br />
+2) Change line in #16 "the-grand-tour" to your style <br />
 3) Run gulp 
+4) Minify Javascript, Clean CSS, Minify Html in your file build
