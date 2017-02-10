@@ -1,4 +1,10 @@
 # Webflow.com optimize DevStack
+
+<p align="center">
+  <a href="http://gulpjs.com">
+    <img width="50" src="https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png" style="max-width:100%;">
+  </a>
+ </p>
 Gulp <br />
 Gulp-concat <br />
 Gulp-clean-css <br />
