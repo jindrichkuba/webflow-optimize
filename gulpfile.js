@@ -13,7 +13,7 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('css', function(){
-  return gulp.src(['css/normalize.css', 'css/webflow.css', 'css/the-grand-tour.webflow.css'])
+  return gulp.src(['css/normalize.css', 'css/webflow.css', '.webflow.css'])
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS())
     .pipe(gulp.dest('build/css'))
