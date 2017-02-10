@@ -16,7 +16,11 @@ Gulp-minfy<br />
 Browser-sync
 
 # Downloads
+<pre><code>
 $ git clone git@github.com:jindrichkuba/webflow-optimize.git
+</code></pre>
 
 # Launch
+<pre><code>
 $ gulp
+</code></pre>
