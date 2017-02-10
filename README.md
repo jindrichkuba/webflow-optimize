@@ -18,7 +18,8 @@ You need to install <a href="http://nodejs.org" target="_blank">Node.js</a>
 <pre><code>$ git clone git@github.com:jindrichkuba/webflow-optimize.git</code></pre>
 
 # Launch
-<pre><code>$ gulp</code></pre>
+<pre><code>$ npm i
+$ gulp</code></pre>
 
 # Usage
 1) Export your website from <a href="http://webflow.com" target="_blank">webflow.com</a> and save files to main path<br />
