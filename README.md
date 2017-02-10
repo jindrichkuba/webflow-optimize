@@ -11,6 +11,9 @@ Gulp-minfy<br />
 <br />
 Browser-sync
 
+# installation 
+You need to install https://nodejs.org/en/
+
 # Downloads
 <pre><code>$ git clone git@github.com:jindrichkuba/webflow-optimize.git</code></pre>
 
