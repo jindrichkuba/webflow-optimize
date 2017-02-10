@@ -1153,7 +1153,7 @@
       $win.off(hashchange, checkHash);
       $.ajax({
         url: cleanSlashes("https://editor-api.webflow.com" + '/api/editor/view'),
-        data: { siteId: "586e743290a0f1ef3aa833a3" },
+        data: { siteId: $html.attr('data-wf-site') },
         xhrFields: { withCredentials: true },
         dataType: 'json',
         crossDomain: true,
@@ -1215,7 +1215,7 @@
     var api = {};
 
     // Cross-Domain AJAX for IE8
-
+    
 
     var $doc = $(document);
     var $forms;
@@ -1223,9 +1223,10 @@
     var retro = window.XDomainRequest && !window.atob;
     var namespace = '.w-form';
     var siteId;
-    var emailField = /e(\-)?mail/i;
+    var emailField = /e(-)?mail/i;
     var emailValue = /^\S+@\S+$/;
     var alert = window.alert;
+    var inApp = Webflow.env();
     var listening;
 
     // MailChimp domains: list-manage.com + mirrors
@@ -1235,20 +1236,18 @@
       alert('Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.');
     }, 100);
 
-    api.ready = function() {
+    api.ready = api.design = api.preview = function() {
       // Init forms
       init();
 
-      // Wire document events once
-      if (!listening) addListeners();
-    };
-
-    api.preview = api.design = function() {
-      init();
+      // Wire document events on published site only once
+      if (!inApp && !listening) {
+        addListeners();
+      }
     };
 
     function init() {
-      siteId = "586e743290a0f1ef3aa833a3";
+      siteId = $('html').attr('data-wf-site');
 
       $forms = $(namespace + ' form');
       if (!$forms.length) return;
@@ -1596,6 +1595,9 @@
     };
 
     api.ready = function() {
+      // Redirect IX init while in design/preview modes
+      if (inApp) return env('design') ? api.design() : api.preview();
+
       // Ready should only be used after destroy, as a way to re-init
       if (config && destroyed) {
         destroyed = false;
@@ -1919,6 +1921,9 @@
     // (In app) Set styles immediately and manage upstream transition
     function styleApp(el, data) {
       var _tram = tram(el);
+
+      // Exit early when data is empty to avoid clearing upstream
+      if ($.isEmptyObject(data)) return;
 
       // Get computed transition value
       el.css('transition', '');
@@ -3483,6 +3488,7 @@
     // Module methods
 
     api.ready = function() {
+      designer = Webflow.env('design');
       init();
     };
 
@@ -4340,5 +4346,17 @@ Webflow.require('ix').init([
   {"slug":"open-modal","name":"Open Modal","value":{"style":{},"triggers":[{"type":"click","selector":".modal-wrapper","preserve3d":true,"stepsA":[{"display":"block","opacity":1,"transition":"transform 200 ease 0, opacity 200 ease 0","scaleX":1,"scaleY":1,"scaleZ":1}],"stepsB":[]}]}},
   {"slug":"close-modal","name":"Close Modal","value":{"style":{},"triggers":[{"type":"click","selector":".modal-wrapper","preserve3d":true,"stepsA":[{"opacity":0,"transition":"transform 200 ease 0, opacity 200 ease 0","scaleX":1.1,"scaleY":1.1,"scaleZ":1},{"display":"none"}],"stepsB":[]}]}},
   {"slug":"modal-wraper","name":"Modal Wraper","value":{"style":{"display":"none","opacity":0,"scaleX":1.1,"scaleY":1.1,"scaleZ":1},"triggers":[]}},
-  {"slug":"play-video","name":"Play video","value":{"style":{},"triggers":[{"type":"click","stepsA":[{"opacity":0,"transition":"opacity 200 ease 0"}],"stepsB":[]},{"type":"click","selector":".video","stepsA":[{"display":"block"}],"stepsB":[]}]}}
+  {"slug":"play-video","name":"Play video","value":{"style":{},"triggers":[{"type":"click","stepsA":[{"opacity":0,"transition":"opacity 200 ease 0"}],"stepsB":[]},{"type":"click","selector":".video","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-1","name":"image-1","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-1","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-2","name":"image-2","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-2","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-3","name":"image-3","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-3","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-4","name":"image-4","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-4","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-5","name":"image-5","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-5","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-6","name":"image-6","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-6","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-7","name":"image-7","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-7","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-8","name":"image-8","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-8","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-9","name":"image-9","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-9","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-10","name":"image-10","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-10","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-11","name":"image-11","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-11","stepsA":[{"display":"block"}],"stepsB":[]}]}},
+  {"slug":"image-12","name":"image-12","value":{"style":{},"triggers":[{"type":"click","selector":".hideimage","stepsA":[{"display":"none"}],"stepsB":[]},{"type":"click","selector":".image-12","stepsA":[{"display":"block"}],"stepsB":[]}]}}
 ]);

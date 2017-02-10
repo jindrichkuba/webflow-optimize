@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Fri Jan 13 2017 16:26:34 GMT+0000 (UTC)  -->
+<!--  Last Published: Fri Feb 10 2017 09:10:02 GMT+0000 (UTC)  -->
 <html data-wf-page="58762393c0dddc3a1658e94e" data-wf-site="586e743290a0f1ef3aa833a3">
 <head>
   <meta charset="utf-8">
@@ -19,9 +19,10 @@
   <div class="section w-clearfix">
     <div class="modal-wrapper" data-ix="modal-wraper">
       <div class="signup-wrapper">
-        <div class="w-form"><a class="close" data-ix="close-modal" href="#">close X</a>
+        <div class="w-form">
+          <a class="close" data-ix="close-modal" href="#">close X</a>
           <h2 class="h2-subscribe">Subscribe form</h2>
-          <form data-name="Email Form 2" id="email-form-2" name="email-form-2">
+          <form action="/subscribe" data-name="Email Form 2" data-redirect="index.php" id="email-form-2" method="post" name="email-form-2" redirect="index.php">
             <div class="flex-block-signup">
               <label for="email">Email Address:</label>
               <input class="subscribe-input w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
@@ -38,19 +39,29 @@
       </div>
     </div>
     <div class="black-nav">
-      <div class="display-desktop w-hidden-small w-hidden-tiny"><a class="nav-link" href="#">The Grand Tour</a><a class="nav-link" href="#">Category 1</a><a class="nav-link" href="#">Category 2</a><a class="nav-link" href="#">Category 3</a>
-        <a class="search w-inline-block" data-ix="open-search-block" href="#"><img data-ix="open-search-block" height="20" src="images/search.jpg" width="20">
-        </a><a class="btn-header w-button" data-ix="open-modal" href="#">Subscribe</a>
+      <div class="display-desktop w-hidden-small w-hidden-tiny">
+        <a class="nav-link" href="#">The Grand Tour</a>
+        <a class="nav-link" href="#">Category 1</a>
+        <a class="nav-link" href="#">Category 2</a>
+        <a class="nav-link" href="#">Category 3</a>
+        <a class="search w-inline-block" data-ix="open-search-block" href="#">
+          <img data-ix="open-search-block" height="20" src="images/search.jpg" width="20">
+        </a>
+        <a class="btn-header w-button" data-ix="open-modal" href="#">Subscribe</a>
       </div>
       <div class="navbar w-hidden-main w-hidden-medium w-nav" data-animation="default" data-collapse="all" data-duration="400">
         <nav class="nav-menu w-nav-menu" role="navigation">
-          <div class="menu-block"><a class="nav-link" href="#">The Grand Tour</a>
+          <div class="menu-block">
+            <a class="nav-link" href="#">The Grand Tour</a>
           </div>
-          <div class="menu-block"><a class="nav-link" href="#">Category 1</a>
+          <div class="menu-block">
+            <a class="nav-link" href="#">Category 1</a>
           </div>
-          <div class="menu-block"><a class="nav-link" href="#">Category 2</a>
+          <div class="menu-block">
+            <a class="nav-link" href="#">Category 2</a>
           </div>
-          <div class="menu-block"><a class="nav-link" href="#">Category 3</a>
+          <div class="menu-block">
+            <a class="nav-link" href="#">Category 3</a>
           </div>
           <div class="form-wrapper w-form">
             <form class="form-search-nav" data-name="Email Form" id="email-form" name="email-form">
@@ -64,7 +75,8 @@
               <div>Oops! Something went wrong while submitting the form</div>
             </div>
           </div>
-          <div class="menu-block"><a class="btn-header w-button" data-ix="open-modal" href="#">Subscribe</a>
+          <div class="menu-block">
+            <a class="btn-header w-button" data-ix="open-modal" href="#">Subscribe</a>
           </div>
         </nav>
         <div class="menu-button w-hidden-main w-nav-button">
@@ -89,19 +101,27 @@
   </div>
   <div class="section">
     <div class="header-block">
-      <div class="logo-block"><img alt="DHL" src="images/logo.png" width="155">
+      <div class="logo-block">
+        <a class="w-inline-block" href="index.html">
+          <img alt="DHL" src="images/logo.png" width="155">
+        </a>
       </div>
       <div class="flex-block-header">
         <div class="social-block">
-          <a class="social-icon w-inline-block" href="#"><img src="images/fb.png" width="35">
+          <a class="social-icon w-inline-block" href="#">
+            <img src="images/fb.png" width="35">
           </a>
-          <a class="social-icon w-inline-block" href="#"><img src="images/twitter.png" width="35">
+          <a class="social-icon w-inline-block" href="#">
+            <img src="images/twitter.png" width="35">
           </a>
-          <a class="social-icon w-inline-block" href="#"><img src="images/google.png" width="34">
+          <a class="social-icon w-inline-block" href="#">
+            <img src="images/google.png" width="34">
           </a>
-          <a class="social-icon w-inline-block" href="#"><img src="images/linkedin.png" width="34">
+          <a class="social-icon w-inline-block" href="#">
+            <img src="images/linkedin.png" width="34">
           </a>
-          <a class="social-icon w-inline-block" href="#"><img src="images/mail.png" width="34">
+          <a class="social-icon w-inline-block" href="#">
+            <img src="images/mail.png" width="34">
           </a>
         </div>
         <div class="max-div-header">
@@ -135,7 +155,8 @@
       </div>
       <div class="content-block-right">
         <div class="w-clearfix">
-          <div class="float-right-top"><img src="images/deer.png">
+          <div class="float-right-top">
+            <img src="images/deer.png">
           </div>
           <h2 class="h2-pb">Lorem ipsum dolor sit amet</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
@@ -194,7 +215,8 @@
               <input class="radio w-radio-input" data-name="Radio" id="Radio -6" name="Radio" required="required" type="radio" value="Radio 4">
               <label class="radio-label w-form-label" for="Radio -6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</label>
             </div>
-            <input class="black-btn w-button" data-wait="Please wait..." type="submit" value="Submit"><a class="share-button w-button" href="#">Share your answer</a>
+            <input class="black-btn w-button" data-wait="Please wait..." type="submit" value="Submit">
+            <a class="share-button w-button" href="#">Share your answer</a>
           </form>
           <div class="w-form-done">
             <div>Thank you! Your submission has been received!</div>
@@ -215,7 +237,8 @@
         <div class="mask w-slider-mask">
           <div class="slides w-slide">
             <div class="slide-block" id="slide-3">
-              <a class="w-inline-block" href="#"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/1.jpg" srcset="images/1-p-500x274.jpeg 500w, images/1-p-800x439.jpeg 800w, images/1.jpg 840w" width="420">
+              <a class="w-inline-block" href="#">
+                <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/1.jpg" srcset="images/1-p-500x274.jpeg 500w, images/1-p-800x439.jpeg 800w, images/1.jpg 840w" width="420">
               </a>
               <div class="block-in-slide">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -224,7 +247,8 @@
           </div>
           <div class="slides w-slide">
             <div class="slide-block" id="slide-3">
-              <a class="w-inline-block" href="#"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/2.jpg" srcset="images/2-p-500x274.jpeg 500w, images/2-p-800x439.jpeg 800w, images/2.jpg 840w" width="420">
+              <a class="w-inline-block" href="#">
+                <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/2.jpg" srcset="images/2-p-500x274.jpeg 500w, images/2-p-800x439.jpeg 800w, images/2.jpg 840w" width="420">
               </a>
               <div class="block-in-slide">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -233,7 +257,8 @@
           </div>
           <div class="slides w-slide">
             <div class="slide-block" id="slide-3">
-              <a class="w-inline-block" href="#"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/3.jpg" srcset="images/3-p-500x274.jpeg 500w, images/3-p-800x439.jpeg 800w, images/3.jpg 840w" width="420">
+              <a class="w-inline-block" href="#">
+                <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/3.jpg" srcset="images/3-p-500x274.jpeg 500w, images/3-p-800x439.jpeg 800w, images/3.jpg 840w" width="420">
               </a>
               <div class="block-in-slide">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -242,7 +267,8 @@
           </div>
           <div class="slides w-slide">
             <div class="slide-block" id="slide-3">
-              <a class="w-inline-block" href="#"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/1.jpg" srcset="images/1-p-500x274.jpeg 500w, images/1-p-800x439.jpeg 800w, images/1.jpg 840w" width="420">
+              <a class="w-inline-block" href="#">
+                <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/1.jpg" srcset="images/1-p-500x274.jpeg 500w, images/1-p-800x439.jpeg 800w, images/1.jpg 840w" width="420">
               </a>
               <div class="block-in-slide">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -251,7 +277,8 @@
           </div>
           <div class="slides w-slide">
             <div class="slide-block" id="slide-3">
-              <a class="w-inline-block" href="#"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/2.jpg" srcset="images/2-p-500x274.jpeg 500w, images/2-p-800x439.jpeg 800w, images/2.jpg 840w" width="420">
+              <a class="w-inline-block" href="#">
+                <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/2.jpg" srcset="images/2-p-500x274.jpeg 500w, images/2-p-800x439.jpeg 800w, images/2.jpg 840w" width="420">
               </a>
               <div class="block-in-slide">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -260,7 +287,8 @@
           </div>
           <div class="slides w-slide">
             <div class="slide-block" id="slide-3">
-              <a class="w-inline-block" href="#"><img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/3.jpg" srcset="images/3-p-500x274.jpeg 500w, images/3-p-800x439.jpeg 800w, images/3.jpg 840w" width="420">
+              <a class="w-inline-block" href="#">
+                <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 55vw, (max-width: 991px) 36vw, 22vw" src="images/3.jpg" srcset="images/3-p-500x274.jpeg 500w, images/3-p-800x439.jpeg 800w, images/3.jpg 840w" width="420">
               </a>
               <div class="block-in-slide">
                 <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -273,6 +301,116 @@
         </div>
         <div class="arrow arrow-right w-slider-arrow-right">
           <div class="w-icon-slider-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="content-white-block">
+      <div class="max-block-content">
+        <h3>Lorem ipsum dolor sit amet</h3>
+        <p class="p-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dapibus fermentum ipsum. Quisque porta. Pellentesque arcu. Nulla est. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Integer imperdiet lectus quis justo. Aliquam erat volutpat. Phasellus rhoncus. Pellentesque sapien.
+          <br>
+          <br>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Maecenas sollicitudin. Praesent vitae arcu tempor neque lacinia pretium. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Proin mattis lacinia justo. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede. Maecenas sollicitudin. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem.</p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="gallery">
+      <div class="preview-block" data-ix="image-2">
+        <div class="hideimage image-1">
+          <img sizes="(max-width: 479px) 100vw, (max-width: 767px) 95vw, 96vw" src="images/nahled.jpg" srcset="images/nahled-p-500x233.jpeg 500w, images/nahled-p-800x372.jpeg 800w, images/nahled.jpg 980w">
+        </div>
+        <div class="hideimage image-2">
+          <img sizes="100vw" src="images/nahled-2.jpg" srcset="images/nahled-2-p-500x233.jpeg 500w, images/nahled-2-p-800x372.jpeg 800w, images/nahled-2.jpg 980w">
+        </div>
+        <div class="hideimage image-3">
+          <img data-ix="image-3" sizes="100vw" src="images/nahled-3.jpg" srcset="images/nahled-3-p-500x233.jpeg 500w, images/nahled-3-p-800x372.jpeg 800w, images/nahled-3.jpg 980w">
+        </div>
+        <div class="hideimage image-4">
+          <img sizes="100vw" src="images/nahled-4.jpg" srcset="images/nahled-4-p-500x233.jpeg 500w, images/nahled-4-p-800x372.jpeg 800w, images/nahled-4.jpg 980w">
+        </div>
+        <div class="hideimage image-5">
+          <img sizes="100vw" src="images/nahled-5.jpg" srcset="images/nahled-5-p-500x233.jpeg 500w, images/nahled-5-p-800x372.jpeg 800w, images/nahled-5.jpg 980w">
+        </div>
+        <div class="hideimage image-6">
+          <img sizes="100vw" src="images/nahled-6.jpg" srcset="images/nahled-6-p-500x233.jpeg 500w, images/nahled-6-p-800x372.jpeg 800w, images/nahled-6.jpg 980w">
+        </div>
+        <div class="hideimage image-7">
+          <img sizes="100vw" src="images/nahled-7.jpg" srcset="images/nahled-7-p-500x233.jpeg 500w, images/nahled-7-p-800x372.jpeg 800w, images/nahled-7.jpg 980w">
+        </div>
+        <div class="hideimage image-8">
+          <img sizes="100vw" src="images/nahled-8.jpg" srcset="images/nahled-8-p-500x233.jpeg 500w, images/nahled-8-p-800x372.jpeg 800w, images/nahled-8.jpg 980w">
+        </div>
+        <div class="hideimage image-9">
+          <img sizes="100vw" src="images/nahled-9.jpg" srcset="images/nahled-9-p-500x233.jpeg 500w, images/nahled-9-p-800x372.jpeg 800w, images/nahled-9.jpg 980w">
+        </div>
+        <div class="hideimage image-10">
+          <img sizes="100vw" src="images/nahled-10.jpg" srcset="images/nahled-10-p-500x233.jpeg 500w, images/nahled-10-p-800x372.jpeg 800w, images/nahled-10.jpg 980w">
+        </div>
+        <div class="hideimage image-11">
+          <img sizes="100vw" src="images/nahled-11.jpg" srcset="images/nahled-11-p-500x233.jpeg 500w, images/nahled-11-p-800x372.jpeg 800w, images/nahled-11.jpg 980w">
+        </div>
+        <div class="hideimage image-12">
+          <img sizes="100vw" src="images/nahled-12.jpg" srcset="images/nahled-12-p-500x233.jpeg 500w, images/nahled-12-p-800x372.jpeg 800w, images/nahled-12.jpg 980w">
+        </div>
+      </div>
+      <div class="flex-gallery w-clearfix">
+        <div class="flex-preview">
+          <img data-ix="image-1" src="images/1_1.jpg">
+        </div>
+        <div class="flex-preview">
+          <img data-ix="image-2" src="images/2_2.jpg">
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-3" src="images/3_2.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-4" src="images/4_1.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-5" src="images/5.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-6" src="images/6_1.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-7" src="images/7.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-8" src="images/8.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-9" src="images/9.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-10" src="images/10.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-11" src="images/11.jpg">
+          </a>
+        </div>
+        <div class="flex-preview">
+          <a class="w-inline-block" href="#">
+            <img data-ix="image-12" src="images/12.jpg">
+          </a>
         </div>
       </div>
     </div>
@@ -293,11 +431,13 @@
       <div class="text-content-block">
         <div class="max-block-article">
           <h2 class="h2-pb">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p><a class="black-btn w-button" href="#">Read more</a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          <a class="black-btn w-button" href="#">Read more</a>
         </div>
       </div>
       <div class="img-block">
-        <a class="w-inline-block" href="#"><img sizes="(max-width: 767px) 100vw, (max-width: 991px) 61vw, 35vw" src="images/truck.jpg" srcset="images/truck-p-500x285.jpeg 500w, images/truck-p-800x456.jpeg 800w, images/truck.jpg 825w" width="825">
+        <a class="w-inline-block" href="#">
+          <img sizes="(max-width: 767px) 100vw, (max-width: 991px) 61vw, 35vw" src="images/truck.jpg" srcset="images/truck-p-500x285.jpeg 500w, images/truck-p-800x456.jpeg 800w, images/truck.jpg 825w" width="825">
         </a>
       </div>
     </div>
@@ -323,11 +463,14 @@
       <div class="flex-car-content">
         <div class="right-flex-block">
           <h2 class="white-h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-          <a class="social-white w-inline-block" href="#"><img src="images/fb-white.png">
+          <a class="social-white w-inline-block" href="#">
+            <img src="images/fb-white.png">
           </a>
-          <a class="social-white w-inline-block" href="#"><img src="images/twitter-white.png">
+          <a class="social-white w-inline-block" href="#">
+            <img src="images/twitter-white.png">
           </a>
-          <a class="w-inline-block" href="#"><img src="images/youtube-white.png">
+          <a class="w-inline-block" href="#">
+            <img src="images/youtube-white.png">
           </a>
         </div>
         <div class="left-flex-block">
@@ -346,7 +489,8 @@
       </div>
       <div class="flex-article flex-with-head">
         <div class="block-article">
-          <a class="w-inline-block" href="#"><img src="images/bycikl.jpg">
+          <a class="w-inline-block" href="#">
+            <img src="images/bycikl.jpg">
           </a>
           <div class="text-article-block">
             <h2 class="h2-pb">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
@@ -354,7 +498,8 @@
           </div>
         </div>
         <div class="block-article">
-          <a class="w-inline-block" href="#"><img src="images/tonque.png">
+          <a class="w-inline-block" href="#">
+            <img src="images/tonque.png">
           </a>
           <div class="text-article-block">
             <h2 class="h2-pb">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
@@ -362,7 +507,8 @@
           </div>
         </div>
         <div class="block-article">
-          <a class="w-inline-block" href="#"><img src="images/rhino.jpg">
+          <a class="w-inline-block" href="#">
+            <img src="images/rhino.jpg">
           </a>
           <div class="text-article-block">
             <h2 class="h2-pb">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
@@ -376,18 +522,22 @@
     <div class="footer-block">
       <div class="max-block-footer">
         <h2 class="h2-pb">Stay updated</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p><a class="black-btn w-button" href="#">Sign up</a>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+        <a class="black-btn w-button" href="#">Sign up</a>
         <div class="social-flex-block">
           <div class="social-padding">
-            <a class="w-inline-block" href="#"><img src="images/icon-fb.png" width="47">
+            <a class="w-inline-block" href="#">
+              <img src="images/icon-fb.png" width="47">
             </a>
           </div>
           <div class="social-padding">
-            <a class="w-inline-block" href="#"><img src="images/icon-twitter.png" width="47">
+            <a class="w-inline-block" href="#">
+              <img src="images/icon-twitter.png" width="47">
             </a>
           </div>
           <div class="social-padding">
-            <a class="w-inline-block" href="#"><img src="images/icon-youtube.png" width="47">
+            <a class="w-inline-block" href="#">
+              <img src="images/icon-youtube.png" width="47">
             </a>
           </div>
         </div>
@@ -396,12 +546,18 @@
   </div>
   <div class="section">
     <div class="footer-nav">
-      <div class="footer-down-block"><a class="white-footer-link" href="#">dhl.com</a><a class="white-footer-link" href="#">Delivered.</a><a class="white-footer-link" href="#">Delivering Tomorrow</a>
+      <div class="footer-down-block">
+        <a class="white-footer-link" href="#">dhl.com</a>
+        <a class="white-footer-link" href="#">Delivered.</a>
+        <a class="white-footer-link" href="#">Delivering Tomorrow</a>
       </div>
       <div class="footer-down-block">
         <div class="white-text">2016 © DHL. All rights reserved</div>
       </div>
-      <div class="footer-down-block"><a class="white-footer-link" href="#">Legal Notice</a><a class="white-footer-link" href="#">Terms of Use</a><a class="white-footer-link" href="#">Privacy Notice</a>
+      <div class="footer-down-block">
+        <a class="white-footer-link" href="#">Legal Notice</a>
+        <a class="white-footer-link" href="#">Terms of Use</a>
+        <a class="white-footer-link" href="#">Privacy Notice</a>
       </div>
     </div>
     <div class="white-line"></div>

@@ -907,6 +907,82 @@ p {
   color: rgba(85, 85, 85, .7);
 }
 
+.content-white-block {
+  padding: 50px 20px 70px;
+}
+
+.flex-gallery {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.preview-block {
+  min-height: 455px;
+  text-align: center;
+}
+
+.flex-preview {
+  margin-right: 7px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+.gallery {
+  padding-bottom: 70px;
+}
+
+.gallery-preview {
+  display: block;
+}
+
+.image-1 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  display: block;
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.image-2 {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  display: none;
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hideimage {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  display: none;
+  max-width: 1020px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.hideimage.image-1 {
+  display: block;
+}
+
 html.w-mod-js *[data-ix="modal-wraper"] {
   display: none;
   opacity: 0;
@@ -1150,6 +1226,13 @@ html.w-mod-js *[data-ix="modal-wraper"] {
     padding-bottom: 20px;
     background-size: cover;
   }
+  .flex-gallery {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .preview-block {
+    min-height: 400px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1303,6 +1386,28 @@ html.w-mod-js *[data-ix="modal-wraper"] {
   }
   .h3-pt {
     margin-top: 40px;
+  }
+  .flex-gallery {
+    display: block;
+    margin-right: 4%;
+    margin-left: 4%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    text-align: center;
+  }
+  .preview-block {
+    min-height: 300px;
+  }
+  .flex-preview {
+    margin-bottom: 10px;
+    float: left;
   }
 }
 
@@ -1459,6 +1564,13 @@ html.w-mod-js *[data-ix="modal-wraper"] {
   }
   .form-survey {
     text-align: center;
+  }
+  .flex-gallery {
+    margin-right: 7%;
+    margin-left: 7%;
+  }
+  .preview-block {
+    min-height: 150px;
   }
 }
 
