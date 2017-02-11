@@ -13,7 +13,7 @@ gulp.task('fonts', function(){
 });
 
 gulp.task('css', function(){
-  return gulp.src(['css/normalize.css', 'css/webflow.css', '.webflow.css'])
+  return gulp.src(['css/normalize.css', 'css/webflow.css', 'yourstyle.webflow.css'])
     .pipe(concat('style.min.css'))
     .pipe(cleanCSS())
     .pipe(gulp.dest('build/css'))
@@ -35,7 +35,7 @@ gulp.task('html', ['javascript', 'css', 'fonts', 'images'], function(){
   return gulp.src('*.html')
     .pipe(replace('<link href="css/normalize.css" rel="stylesheet" type="text/css">',''))
     .pipe(replace('<link href="css/webflow.css" rel="stylesheet" type="text/css">',''))
-    .pipe(replace('css/the-grand-tour.webflow.css','css/style.min.css'))
+    .pipe(replace('css/yourstyle.webflow.css','css/style.min.css'))
     .pipe(replace('<script src="js/modernizr.js','<script async src="js/modernizr-min.js'))
     .pipe(replace('js/webflow.js','js/webflow-min.js'))
     .pipe(htmlmin({collapseWhitespace: true}))
