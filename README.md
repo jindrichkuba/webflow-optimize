@@ -23,6 +23,6 @@ $ gulp</code></pre>
 
 # Usage
 1) Export your website from <a href="http://webflow.com" target="_blank">webflow.com</a> and save files to main path<br />
-2) Change line in #16 ".webflow.css" to your style <br />
+2) Change line in #16 gulpfile.js ".webflow.css" to your style <br />
 3) Run gulp <br />
 4) Minify Javascript (webflow.min.js, modernizr-min.js), Clean CSS (1 css style.min.css), Optimazed Images and Minify Html now are in your build
