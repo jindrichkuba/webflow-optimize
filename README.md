@@ -26,3 +26,6 @@ $ gulp</code></pre>
 2) Change line in #16 and #38 gulpfile.js ".webflow.css" to your style <br />
 3) Run gulp <br />
 4) Minify Javascript (webflow.min.js, modernizr-min.js), Clean CSS (1 css style.min.css), Optimazed Images and Minify Html now are in your build
+
+# Donate
+<a href="https://www.paypal.me/JKuba/" target="_blank">paypal.me</a>
